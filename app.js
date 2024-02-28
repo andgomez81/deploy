@@ -85,15 +85,3 @@ const introText = gsap.timeline({
     .from(`#contact .text-content`, { x: 1200, y: 0, duration: 1  })
     .to(`#contact .text-content`, { x: 0, y: 0, duration: 1  })
     .to(`#li-contact`, { backgroundColor: `white`,duration: 1,});
-
-
-    function sendMail(){
-        let parms = {
-        Name: document.getElementById("name").value,
-        Email: document.getElementById("email").value,
-        subject: document.getElementById("subjec").value,
-        message: document.getElementById("message").value,
-        }
-        emailjs.send("service_c6f6t8u","template_h72ebxd", parms).then(alert("Email Sent!!"))
-        }
-        
